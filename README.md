@@ -3,6 +3,10 @@
 A testing script for the [`khmer-nlp-kcc`](https://pypi.org/project/khmer-nlp-kcc/) library (v0.2.8).  
 Runs **word segmentation**, **POS tagging**, and **sentiment polarity** on Khmer text from a CSV file.
 
+
+[`Github khmer-nlp-kcc`](https://github.com/rinabuoy/khmer-nlp-kcc)
+|
+[`library kcc (v0.2.8)`](https://pypi.org/project/khmer-nlp-kcc/)
 ---
 
 ## Features
