@@ -46,19 +46,7 @@ This will automatically install all dependencies:
 
 ---
 
-## Input Format
 
-`input.csv` requires only one column: `text`.  
-Add one Khmer sentence per row. No `id` column needed — it is auto-generated.
-
-```csv
-text
-ខ្ញុំចូលចិត្តញ៉ាំបាយជាមួយគ្រួសារ
-គាត់ទៅផ្សារទិញបន្លែនិងត្រី
-ប្រទេសកម្ពុជាមានប្រវត្តិសាស្ត្រដ៏វែងឆ្ងាយ
-```
-
----
 
 ## Usage
 
@@ -66,31 +54,7 @@ text
 python kcc.py
 ```
 
----
 
-## Output Format
-
-Results are saved to `result_1.csv` with the following columns:
-
-| Column | Description |
-|---|---|
-| `id` | Auto-generated row number |
-| `original_text` | The original input sentence |
-| `segmented` | Words split by spaces |
-| `pos_tags` | POS tag per word — e.g. `ខ្ញុំ(PRO) \| ចូលចិត្ត(VB)` |
-| `nova_pos` | Nova POS tag per word — e.g. `ខ្ញុំ(n-) \| ចូលចិត្ត(v)` |
-| `polarity` | Sentiment label: `positive`, `neutral`, or `negative` |
-| `confidence` | Confidence score for the predicted sentiment (0–1) |
-| `all_scores` | Full probability breakdown for all 3 sentiment classes |
-
-### Example output
-
-| id | original_text | segmented | pos_tags | polarity | confidence |
-|---|---|---|---|---|---|
-| 1 | ខ្ញុំចូលចិត្តញ៉ាំបាយជាមួយគ្រួសារ | ខ្ញុំ ចូលចិត្ត ញ៉ាំ បាយ ជាមួយ គ្រួសារ | ខ្ញុំ(PRO) \| ចូលចិត្ត(VB) \| ញ៉ាំ(VB) \| បាយ(NN) | positive | 0.524 |
-| 2 | គាត់ទៅផ្សារទិញបន្លែនិងត្រី | គាត់ ទៅ ផ្សារ ទិញ បន្លែ និង ត្រី | គាត់(PRO) \| ទៅ(VB) \| ផ្សារ(NN) \| ទិញ(VB_JJ) | neutral | 0.894 |
-
----
 
 ## POS Tag Reference
 
